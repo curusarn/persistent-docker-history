@@ -1,0 +1,12 @@
+version: "3"
+services: 
+    project-cli:
+        build:  
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - "./.docker_bash_history:/root/.bash_history" 
+        working_dir: /app/
+        entrypoint: bash
+
+
